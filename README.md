@@ -1,1 +1,443 @@
 # pentaksecurity.github.io
+
+[cybersec-portfolio.html](https://github.com/user-attachments/files/22867164/cybersec-portfolio.html)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Khattar - Security Analyst/Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #0f0f0f;
+            color: #e4e4e4;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        header {
+            padding: 80px 0 60px;
+            text-align: center;
+            border-bottom: 1px solid #2a2a2a;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            color: #ffffff;
+            margin-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .title {
+            font-size: 1.3em;
+            color: #a0a0a0;
+            font-weight: 400;
+            margin-bottom: 25px;
+        }
+
+        .contact-bar {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .contact-bar a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.95em;
+            transition: color 0.2s;
+            opacity: 0.8;
+        }
+
+        .contact-bar a:hover {
+            opacity: 1;
+            color: #4a9eff;
+        }
+
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid #2a2a2a;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #ffffff;
+            margin-bottom: 30px;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+        }
+
+        .summary {
+            font-size: 1.05em;
+            color: #c4c4c4;
+            max-width: 900px;
+            line-height: 1.8;
+        }
+
+        .experience-item, .project-item {
+            margin-bottom: 45px;
+        }
+
+        .experience-item:last-child, .project-item:last-child {
+            margin-bottom: 0;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            color: #ffffff;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .meta {
+            color: #888;
+            font-size: 0.95em;
+            margin-bottom: 12px;
+        }
+
+        .description {
+            color: #b4b4b4;
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 12px;
+        }
+
+        ul li {
+            color: #b4b4b4;
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        ul li:before {
+            content: "•";
+            color: #4a9eff;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .skill-category h4 {
+            color: #ffffff;
+            font-size: 1.1em;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .skill-category p {
+            color: #b4b4b4;
+            line-height: 1.6;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tag {
+            background: #1a1a1a;
+            color: #d4d4d4;
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            border: 1px solid #2a2a2a;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .cert-badge {
+            background: #1a1a1a;
+            padding: 15px 20px;
+            border-radius: 6px;
+            text-align: center;
+            border: 1px solid #2a2a2a;
+            color: #d4d4d4;
+            font-size: 0.95em;
+            font-weight: 500;
+        }
+
+        .highlight {
+            background: #1a1a1a;
+            padding: 20px 25px;
+            border-radius: 6px;
+            border-left: 3px solid #4a9eff;
+            margin: 25px 0;
+        }
+
+        .highlight p {
+            color: #c4c4c4;
+            font-size: 1.05em;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .cta-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            color: #a0a0a0;
+            font-size: 1.1em;
+            margin-bottom: 35px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: #ffffff;
+            color: #0f0f0f;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.2s;
+            font-size: 0.95em;
+        }
+
+        .btn:hover {
+            background: #e4e4e4;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #ffffff;
+            color: #ffffff;
+        }
+
+        .btn-secondary:hover {
+            background: #ffffff;
+            color: #0f0f0f;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.5em; }
+            .contact-bar { gap: 15px; }
+            section { padding: 40px 0; }
+            .skills-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Victor Khattar</h1>
+            <p class="title">Security Analyst/Engineer</p>
+            <div class="contact-bar">
+                <a href="mailto:Pentaksecurity@proton.me">Pentaksecurity@proton.me</a>
+                <a href="tel:+14073914211">+1-407-391-4211</a>
+                <a href="https://www.linkedin.com/in/khattarv/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/Pentaksecurity" target="_blank">GitHub</a>
+                <a href="https://medium.com/@pentaksecurity" target="_blank">Medium</a>
+            </div>
+        </header>
+
+        <section id="about">
+            <h2>About</h2>
+            <p class="summary">
+                Cybersecurity professional with hands-on experience in SOC operations, endpoint detection/response (EDR), vulnerability management, and threat analysis. Skilled in log monitoring, malware investigations, SIEM correlation, phishing analysis, and access management across Windows/Linux/Active Directory environments. Strong background in disaster recovery, IAM hardening, and security automation with Python/PowerShell.
+            </p>
+            <div class="highlight">
+                <p><strong>🏆 Top 1% globally on TryHackMe</strong> | Currently pursuing B.S. in Cybersecurity Systems at Western Governors University (Expected Feb 2026)</p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            
+            <div class="experience-item">
+                <h3>BCDR Technical Support Engineer</h3>
+                <p class="meta">Kaseya | Orlando, FL | May 2025 – Present</p>
+                <ul>
+                    <li>Investigate and resolve escalated incidents affecting backup/disaster recovery systems, ensuring data integrity</li>
+                    <li>Perform incident triage, log analysis, and root cause investigations aligned with SOC workflows</li>
+                    <li>Support IAM hardening initiatives to strengthen organizational security posture</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Security Researcher</h3>
+                <p class="meta">HackIdle | Remote | Apr 2025 – Present</p>
+                <ul>
+                    <li>Conduct vulnerability research and develop detection & defense techniques against emerging threats</li>
+                    <li>Publish technical blogs and labs on malware analysis, EDR bypass, and intrusion detection</li>
+                    <li>Build attack/defense lab simulations showcasing exploitation, detection, and mitigation</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Help Desk Specialist</h3>
+                <p class="meta">Mindful Minerals | Remote / Orlando, FL | Dec 2022 – Oct 2024</p>
+                <ul>
+                    <li>Administered Active Directory accounts, access controls, and group policies with security focus</li>
+                    <li>Escalated suspicious activity to SOC for further triage and investigation</li>
+                    <li>Monitored endpoints for malware and deployed remediation strategies to restore business continuity</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects & Labs</h2>
+            
+            <div class="project-item">
+                <h3>SOC/IR Home Lab</h3>
+                <p class="description">Built comprehensive attacker/defender environments to practice SIEM monitoring, incident response workflows, and escalation procedures.</p>
+                <div class="tags">
+                    <span class="tag">Splunk</span>
+                    <span class="tag">Incident Response</span>
+                    <span class="tag">Detection Engineering</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h3>Suricata IDS Deployment</h3>
+                <p class="description">Configured custom IDS rules, validated alerts, and analyzed logs for real-time threat detection in Windows home lab environment.</p>
+                <div class="tags">
+                    <span class="tag">Suricata</span>
+                    <span class="tag">Network Security</span>
+                    <span class="tag">IDS/IPS</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h3>Security Automation Framework</h3>
+                <p class="description">Developed Python/PowerShell scripts to automate log parsing and anomaly detection, improving efficiency in threat identification.</p>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">PowerShell</span>
+                    <span class="tag">Automation</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h3>AWS IAM CLI Project</h3>
+                <p class="description">Hands-on guide for managing AWS Identity and Access Management using CLI for creating, listing, attaching policies, and managing users and groups.</p>
+                <div class="tags">
+                    <span class="tag">AWS IAM</span>
+                    <span class="tag">Cloud Security</span>
+                    <span class="tag">CLI</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h3>CTF Challenges & Writeups</h3>
+                <p class="description">Solved and documented scenarios involving privilege escalation, forensic investigations, network exploitation, and vulnerability analysis on TryHackMe platform.</p>
+                <div class="tags">
+                    <span class="tag">CTF</span>
+                    <span class="tag">Penetration Testing</span>
+                    <span class="tag">OSINT</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Security Operations</h4>
+                    <p>Incident Detection & Response, Threat Hunting, IOC Analysis, Escalation, Reporting</p>
+                </div>
+                <div class="skill-category">
+                    <h4>EDR & SIEM Tools</h4>
+                    <p>Splunk, Suricata, Snort, Wireshark, Qualys, OpenVAS, VirusTotal, Nmap, Burp Suite, Metasploit</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Cybersecurity Domains</h4>
+                    <p>IAM, Vulnerability Management, Malware Analysis, Phishing Defense, DR/BCP</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Systems & Networking</h4>
+                    <p>Windows Server, Active Directory, Linux (Ubuntu/Kali), TCP/IP, DNS, DHCP, VPNs, Firewalls, IDS/IPS</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Automation & Scripting</h4>
+                    <p>Python, PowerShell, Bash – log parsing, anomaly detection, security automation</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Frameworks & Compliance</h4>
+                    <p>MITRE ATT&CK, OWASP Top 10, NIST CSF, ISO 27001, PCI DSS, HIPAA, SOC2, GDPR</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-badge">CompTIA Security+</div>
+                <div class="cert-badge">CompTIA Network+</div>
+                <div class="cert-badge">CompTIA A+</div>
+                <div class="cert-badge">ISC2 SSCP</div>
+                <div class="cert-badge">Google Cybersecurity</div>
+                <div class="cert-badge">Google IT Support</div>
+                <div class="cert-badge">AWS Security IAM</div>
+                <div class="cert-badge">ITIL 4 Foundation</div>
+                <div class="cert-badge">TryHackMe Top 1%</div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Let's Connect</h2>
+            <p>Interested in collaboration or have a security project? Reach out!</p>
+            <div class="cta-buttons">
+                <a href="mailto:Pentaksecurity@proton.me" class="btn">Email Me</a>
+                <a href="https://www.linkedin.com/in/khattarv/" target="_blank" class="btn-secondary btn">LinkedIn</a>
+                <a href="https://github.com/Pentaksecurity" target="_blank" class="btn-secondary btn">GitHub</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Victor Khattar. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
